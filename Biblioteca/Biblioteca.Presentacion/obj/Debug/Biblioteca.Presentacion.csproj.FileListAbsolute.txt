@@ -1,0 +1,12 @@
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.Properties.Resources.resources
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\bin\Debug\Biblioteca.Presentacion.exe.config
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\bin\Debug\Biblioteca.Presentacion.exe
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\bin\Debug\Biblioteca.Presentacion.pdb
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\bin\Debug\Biblioteca.Negocio.dll
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\bin\Debug\Biblioteca.Negocio.pdb
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.csproj.CopyComplete
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.exe
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.pdb

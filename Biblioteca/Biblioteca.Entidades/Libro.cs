@@ -21,7 +21,7 @@ namespace Biblioteca.Entidades
         public int numeroPaginas { get; set; }
         public string ubicacionEstante { get; set; }
         public string descripcion { get; set; }
-        public bool bit { get; set; }
+        public bool estado { get; set; }
 
     }
 }

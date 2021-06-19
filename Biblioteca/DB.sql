@@ -5,12 +5,12 @@ CREATE TABLE libro(
 	titulo nvarchar(200) null,
 	autor nvarchar(200) null,
 	editorial nvarchar(200) null,
-	anioEdicion year(4) null,
+	anioEdicion nvarchar(5) null,
 	numeroEdicion nvarchar(20)null,
 	pais nvarchar(30),
 	idioma nvarchar(20),
 	materia nvarchar(30),
-	numeroPaginas int(10),
+	numeroPaginas nvarchar(10),
 	ubicacionEstante nvarchar(10),
 	descripcion nvarchar(300),
 	estado bit default(1)
@@ -24,6 +24,10 @@ CREATE TABLE rol(
 	estado bit default(1)
 );
 
+insert into rol(nombre,descripcion) values('Administrador','El que adminsitra')
+insert into rol(nombre,descripcion) values('Profesor','El que ensenia')
+
+
 --Tabla Persona
 CREATE TABLE persona (
 	idpersona integer primary key identity,
@@ -31,9 +35,15 @@ CREATE TABLE persona (
 	apellido varchar(50)not null,
 	edad integer null,
 	telefono varchar(20) null,
+	email varchar(50),
+	clave varchar(MAX)not null,
+	estado bit default (1),
 	idrol integer null,
 	FOREIGN KEY (idrol) references rol(idrol)
 );
+
+drop table persona
+drop table prestamo
 
 --Tabla Prestamos
 CREATE TABLE prestamo(
@@ -110,29 +120,60 @@ as
 		end
 
 --Procedimiento Listar libro
-create proc libro_listar
+create proc all_books
 as
 select idlibro as Codigo, titulo as Titulo, autor as Autor, editorial as Editorial, isbm as ISBM, anioEdicion as Anio_de_Edicion, numeroEdicion as Numero_de_Edicion,
-	pais as Pais, idioma as Idioma, materia as Materia, numeroPaginas as Numero_Paginas, ubicacionEstante as Ubicacion,descripcion as Descripcion
+	pais as Pais, idioma as Idioma, materia as Materia, numeroPaginas as Numero_Paginas, ubicacionEstante as Ubicacion,descripcion as Descripcion, estado as Estado
+from libro
+order by idlibro desc
+go
+
+--Procedimiento Listar libro
+create proc get_book_state_asTrue
+as
+select idlibro as Codigo, titulo as Titulo, autor as Autor, editorial as Editorial, isbm as ISBM, anioEdicion as Anio_de_Edicion, numeroEdicion as Numero_de_Edicion,
+	pais as Pais, idioma as Idioma, materia as Materia, numeroPaginas as Numero_Paginas, ubicacionEstante as Ubicacion,descripcion as Descripcion, estado as Estado
 from libro
 where estado = 1
 order by idlibro desc
 go
 
+
 --Procedimiento Buscar libro
-create proc libro_buscar
-@valor varchar(50)
+create proc find_book
+@paramm varchar(50)
 as
 select idlibro as Codigo, titulo as Titulo, autor as Autor, editorial as Editorial, isbm as ISBM, anioEdicion as Anio_de_Edicion, numeroEdicion as Numero_de_Edicion,
 	pais as Pais, idioma as Idioma, materia as Materia, numeroPaginas as Numero_Paginas, ubicacionEstante as Ubicacion,descripcion as Descripcion
 from libro
-where titulo like '%' + @valor + '%' or autor like '%' + @valor + '%'
+where titulo like '%' + @paramm + '%' or autor like '%' + @paramm + '%' 
 order by idlibro desc
 go
 
+--Procedimiento Buscar libro por titulo
+create proc find_book_by_title
+@paramm varchar(50)
+as
+select idlibro as Codigo, titulo as Titulo, autor as Autor, editorial as Editorial, isbm as ISBM, anioEdicion as Anio_de_Edicion, numeroEdicion as Numero_de_Edicion,
+	pais as Pais, idioma as Idioma, materia as Materia, numeroPaginas as Numero_Paginas, ubicacionEstante as Ubicacion,descripcion as Descripcion
+from libro
+where titulo like '%' + @paramm + '%'
+order by idlibro desc
+go
+
+--Procedimiento Buscar libro por autor
+create proc find_book_by_author
+@paramm varchar(50)
+as
+select idlibro as Codigo, titulo as Titulo, autor as Autor, editorial as Editorial, isbm as ISBM, anioEdicion as Anio_de_Edicion, numeroEdicion as Numero_de_Edicion,
+	pais as Pais, idioma as Idioma, materia as Materia, numeroPaginas as Numero_Paginas, ubicacionEstante as Ubicacion,descripcion as Descripcion
+from libro
+where autor like '%' + @paramm + '%' 
+order by idlibro desc
+go
 
 --Procedimiento Insertar libro
-create proc libro_insertar
+create proc add_book
 @isbm nvarchar(30)null,
 @titulo nvarchar(200) null,
 @autor nvarchar(200) null,
@@ -151,7 +192,7 @@ go
 
 
 --Procedimiento actualizar libro
-create proc libro_actualizar
+create proc update_book
 @idlibro int,
 @isbm nvarchar(30) null,
 @titulo nvarchar(200) null,
@@ -174,7 +215,7 @@ where idlibro=@idlibro
 go
 
 --Procedimiento Eliminar libro
-create proc libro_eliminar
+create proc delete_book
 @idlibro int
 as
 delete from libro
@@ -182,28 +223,55 @@ where idlibro=@idlibro
 go
 
 --Para ver si el libro ya existe
-create proc libro_existe
-@valor varchar(100),
-@valor2 varchar(100),
-@existe bit output
+create proc book_existence
+@paramm int,
+@exists bit output
 as
-	if exists (select titulo from libro where titulo = ltrim(rtrim(@valor)) and autor = ltrim(rtrim(@valor2)))
+	if exists (select idlibro from libro where idlibro = ltrim(rtrim(@paramm)))
 		begin
-			set @existe = 1
+			set @exists = 1
 		end
 	else
 		begin
-			set @existe = 0
+			set @exists = 0l
 		end
+select * from libro
+
+
+--PRUEBA
+create proc libro_existe2
+@valor int
+as
+	if exists (select idlibro from libro where idlibro = ltrim(rtrim(@valor)))
+		begin
+			Print 'Existe'
+		end
+	else
+		begin
+			print 'No existe'
+		end
+
+exec libro_existe2 3;
 
 --Procedimiento Listar prestamo
 create proc prestamo_listar
 as
-select persona.idpersona as Profesor, libro.titulo as Libro, fechaDevolucion as Fecha_Prestamo, fechaDevolucion as Fecha_Devolucion
+select prestamo.idpersona as CodigoProfesor,prestamo.idLibro as CodigoLibro,libro.titulo as Libro,persona.nombre + ' '+persona.apellido as Profesor, fechaPrestamo as Fecha_Prestamo, fechaDevolucion as Fecha_Devolucion
 from prestamo inner join persona on prestamo.idpersona = persona.idpersona inner join libro on prestamo.idlibro = libro.idlibro
 where prestamo.estado = 1
 order by persona.idpersona desc
 go
+
+--Procedimiento Listar prestamo por profesor
+create proc prestamo_listar_profesor
+@valor int
+as
+select prestamo.idpersona as CodigoProfesor,prestamo.idLibro as CodigoLibro,libro.titulo as Libro,persona.nombre + ' '+persona.apellido as Profesor, libro.titulo as Libro, fechaPrestamo as Fecha_Prestamo, fechaDevolucion as Fecha_Devolucion
+from prestamo inner join persona on prestamo.idpersona = persona.idpersona inner join libro on prestamo.idlibro = libro.idlibro
+where prestamo.estado = 1 and prestamo.idpersona = @valor
+order by persona.idpersona desc
+go
+
 
 --Procedimiento Buscar prestamo
 create proc prestamo_buscar
@@ -266,7 +334,7 @@ as
 
 
 --Activar libro
-create proc libro_activar
+create proc activate_book
 @IdLibro int
 as 
 update libro set estado=1
@@ -274,7 +342,7 @@ where idlibro = @IdLibro
 go
 
 --Desactivar libro
-create proc libro_desactivar
+create proc deactivate_book
 @IdLibro int
 as 
 update libro set estado=0
@@ -289,3 +357,50 @@ as
 update prestamo set estado=0
 where idlibro = @IdLibro and idpersona = @Idpersona
 go
+
+
+--Usuario login
+create proc persona_login
+@email varchar(50),
+@clave varchar(50)
+as select persona.idpersona, persona.idrol,rol.nombre as rol,persona.nombre, persona.estado
+from persona inner join rol on persona.idrol = rol.idrol
+where persona.email=@email and persona.clave=HASHBYTES('SHA2_256',@clave)
+go
+
+
+DECLARE @pruebaroot varbinary = HASHBYTES('SHA2_256','root')
+print @pruebaroot
+
+
+exec persona_login 'alexis@proyecto.com','root';
+
+create proc libro_seleccionar
+as
+select * from libro
+select * from rol
+
+select * from persona
+where persona.nombre = 'ALEXIS'
+
+select * from prestamo
+
+
+delete from persona
+
+
+delete from prestamo
+
+insert into libro(isbm,autor,titulo) values('a','a','a')
+insert into persona(nombre,apellido,idrol,email,clave) values('Alexis','Mancia','1','alexis@proyecto.com',HASHBYTES('SHA2_256','root'))
+insert into persona(nombre,apellido,idrol,email,clave) values('Daniel','Orozco','2','daniel@selacome.com',HASHBYTES('SHA2_256','root'))
+
+insert into persona(nombre,apellido) values('Moises','Daniel')
+insert into persona(nombre,apellido) values('Daniel','Orozco')
+insert into persona(nombre,apellido) values('Maria','Moran')
+
+exec prestamo_desactivar 6,7;
+
+select * from prestamo
+
+create database dbNCapasProyecto;
