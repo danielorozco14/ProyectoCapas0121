@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Entidades
 {
-    class Prestamo
+    public class Prestamo
     {
-        int idPersona { get; set; }
-        int idLibro { get; set; }
-        DateTime fechaPrestamo { get; set; }
-        DateTime fechaDevolucion { get; set; }
-        bool estado { get; set; }
+        public int idPersona { get; set; }
+        public int idLibro { get; set; }
+        public DateTime fechaPrestamo { get; set; }
+        public DateTime fechaDevolucion { get; set; }
+        public bool estado { get; set; }
 
 
     }

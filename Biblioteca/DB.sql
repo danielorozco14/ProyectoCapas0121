@@ -263,29 +263,31 @@ order by persona.idpersona desc
 go
 
 --Procedimiento Listar prestamo por profesor
-create proc prestamo_listar_profesor
-@valor int
+create proc list_proffesor_loans
+@paramm int
 as
-select prestamo.idpersona as CodigoProfesor,prestamo.idLibro as CodigoLibro,libro.titulo as Libro,persona.nombre + ' '+persona.apellido as Profesor, libro.titulo as Libro, fechaPrestamo as Fecha_Prestamo, fechaDevolucion as Fecha_Devolucion
+select prestamo.idpersona as CodigoProfesor,prestamo.idLibro as CodigoLibro,libro.titulo as Libro,persona.nombre + ' '+persona.apellido as Profesor,
+	libro.titulo as Libro, fechaPrestamo as Fecha_Prestamo, 
+	fechaDevolucion as Fecha_Devolucion
 from prestamo inner join persona on prestamo.idpersona = persona.idpersona inner join libro on prestamo.idlibro = libro.idlibro
-where prestamo.estado = 1 and prestamo.idpersona = @valor
+where prestamo.estado = 1 and prestamo.idpersona = @paramm
 order by persona.idpersona desc
 go
 
 
 --Procedimiento Buscar prestamo
-create proc prestamo_buscar
-@valor varchar(50),
-@valor2 varchar(50)
+create proc find_loan
+@paramm1 varchar(50),
+@paramm2 varchar(50)
 as
 select persona.idpersona as Profesor, libro.titulo as Libro, fechaDevolucion as Fecha_Prestamo, fechaDevolucion as Fecha_Devolucion
 from prestamo inner join persona on prestamo.idpersona = persona.idpersona inner join libro on prestamo.idlibro = libro.idlibro
-where persona.idpersona like '%' + @valor + '%' and prestamo.idlibro like '%' + @valor2
+where persona.idpersona like '%' + @paramm1 + '%' and prestamo.idlibro like '%' + @paramm2
 order by persona.idpersona desc
 go
 
 --Procedimiento Insertar prestamo
-create proc prestamo_insertar
+create proc add_loan
 @idpersona integer,
 @idlibro integer,
 @fechaPrestamo date,
@@ -308,7 +310,7 @@ go
 
 --Procedimiento Eliminar prestamo
 --Este nunca se va a usar
-create proc prestamo_eliminar
+create proc delete_loan
 @idlibro int,
 @idpersona int
 as
@@ -318,18 +320,18 @@ go
 
 
 --Para ver si prestamo ya existe
-create proc prestamo_existe
-@valor varchar(100),
-@valor2 varchar(100),
-@existe bit output
+create proc if_loan_exist
+@paramm1 varchar(100),
+@paramm2 varchar(100),
+@exists bit output
 as
-	if exists (select idpersona,idlibro from prestamo where idlibro = ltrim(rtrim(@valor)) and idpersona = ltrim(rtrim(@valor2)))
+	if exists (select idpersona,idlibro from prestamo where idlibro = ltrim(rtrim(@paramm1)) and idpersona = ltrim(rtrim(@paramm2)))
 		begin
-			set @existe = 1
+			set @exists = 1
 		end
 	else
 		begin
-			set @existe = 0
+			set @exists = 0
 		end
 
 
@@ -350,7 +352,7 @@ where idlibro = @IdLibro
 go
 
 --Desactivar prestamo
-create proc prestamo_desactivar
+create proc deactivate_loan
 @IdLibro int,
 @Idpersona int
 as 
