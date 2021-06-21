@@ -9,7 +9,7 @@ using Biblioteca.Entidades;
 
 namespace Biblioteca.Datos
 {
-    class PersonaDAO
+    public class PersonaDAO
     {
 
         public DataTable listAll()

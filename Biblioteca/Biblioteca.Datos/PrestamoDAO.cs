@@ -10,7 +10,7 @@ using Biblioteca.Entidades;
 
 namespace Biblioteca.Datos
 {
-    class PrestamoDAO
+    public class PrestamoDAO
     {
         public DataTable listAll()
         {
