@@ -41,7 +41,8 @@ namespace Biblioteca.Negocio
         public static string addBook(int idBook, string title, string autor, 
                             string isbm, string editorial, string anioEdicion, 
                             string numeroEdicion, string pais, string idioma,
-                            string materia, int numeroPaginas, string ubicacionEstante, string descripcion)
+                            string materia, int numeroPaginas, string ubicacionEstante,
+                            string descripcion)
         {
             string exists = libroDAO.ifBookExists(idBook);
             //Possible error with 1, should be "1" instead
@@ -58,11 +59,13 @@ namespace Biblioteca.Negocio
                 book.isbm = isbm;
                 book.editorial = editorial;
                 book.anioEdicion = anioEdicion;
+                book.numeroEdicion = numeroEdicion;
                 book.pais = pais;
                 book.idioma = idioma;
                 book.materia = materia;
                 book.numeroPaginas = numeroPaginas;
                 book.ubicacionEstante = ubicacionEstante;
+                book.descripcion = descripcion;
 
                 return libroDAO.addBook(book);
             }
@@ -72,7 +75,8 @@ namespace Biblioteca.Negocio
         public static string updateBook(int idBook, string title, string autor,
                           string isbm, string editorial, string anioEdicion,
                           string numeroEdicion, string pais, string idioma,
-                          string materia, int numeroPaginas, string ubicacionEstante, string descripcion)
+                          string materia, int numeroPaginas, string ubicacionEstante,
+                          string descripcion, bool estado)
         {
             string exists = libroDAO.ifBookExists(idBook);
             //Possible error with 1, should be "1" instead
@@ -89,11 +93,14 @@ namespace Biblioteca.Negocio
                 book.isbm = isbm;
                 book.editorial = editorial;
                 book.anioEdicion = anioEdicion;
+                book.numeroEdicion = numeroEdicion;
                 book.pais = pais;
                 book.idioma = idioma;
                 book.materia = materia;
                 book.numeroPaginas = numeroPaginas;
                 book.ubicacionEstante = ubicacionEstante;
+                book.descripcion = descripcion;
+                book.estado = estado;
 
                 return libroDAO.updateBook(book);
             }
