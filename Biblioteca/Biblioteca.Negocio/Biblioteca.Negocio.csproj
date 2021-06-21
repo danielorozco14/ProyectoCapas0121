@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LibroService.cs" />
+    <Compile Include="PersonaService.cs" />
+    <Compile Include="PrestamoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

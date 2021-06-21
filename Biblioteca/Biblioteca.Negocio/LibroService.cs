@@ -11,7 +11,8 @@ namespace Biblioteca.Negocio
 {
     public class LibroService
     {
-        public static LibroDAO libroDAO = new LibroDAO();
+        //Change to public if fails
+        private static LibroDAO libroDAO = new LibroDAO();
 
         public static DataTable allBooks()
         {
