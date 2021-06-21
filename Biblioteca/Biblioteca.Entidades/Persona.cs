@@ -9,14 +9,14 @@ namespace Biblioteca.Entidades
     public class Persona
     {
         //If fails, check DB definition on table Persona
-        int idPersona { get; set; }
-        string email { get; set; }
-        string password { get; set; }
-        string nombre { get; set; }
-        string apellido { get; set; }
-        int edad { get; set; }
-        string telefono { get; set; }
-        int idRol { get; set; }
+        public int idPersona { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public string nombre { get; set; }
+        public string apellido { get; set; }
+        public int edad { get; set; }
+        public string telefono { get; set; }
+        public int idRol { get; set; }
 
         public Persona() {}
 

@@ -57,7 +57,7 @@ CREATE TABLE prestamo(
 );
 
 --Procedimiento Listar persona
-create proc persona_listar
+create proc all_persons
 as
 select idpersona as Codigo, nombre as Nombre, apellido as Apellido, telefono as Telefono, edad as Edad
 from persona
@@ -65,17 +65,17 @@ order by idpersona desc
 go
 
 --Procedimiento Buscar persona
-create proc persona_buscar
-@valor varchar(50)
+create proc find_person
+@paramm varchar(50)
 as
 select idpersona as ID, nombre as Nombre, apellido as Apellido, telefono as Telefono, edad as Edad
 from persona
-where nombre like '%' + @valor + '%' or apellido like '%' + @valor + '%'
+where nombre like '%' + @paramm + '%' or apellido like '%' + @paramm + '%'
 order by nombre desc
 go
 
 --Procedimiento Insertar persona
-create proc persona_insertar
+create proc add_person
 @nombre varchar(50),
 @apellido varchar(255),
 @telefono varchar(20),
@@ -85,7 +85,7 @@ insert into persona (nombre,apellido,telefono,edad) values (@nombre,@apellido,@t
 go
 
 --Procedimiento Actualizar persona
-create proc persona_actualizar
+create proc update_person
 @idpersona int,
 @nombre varchar(50),
 @apellido varchar(255),
@@ -97,7 +97,7 @@ where idpersona=@idpersona
 go
 
 --Procedimiento Eliminar persona
-create proc persona_eliminar
+create proc delete_person
 @idpersona int
 as
 delete from persona
@@ -105,18 +105,18 @@ where idpersona=@idpersona
 go
 
 --Para ver si la persona ya existe
-create proc persona_existe
-@valor varchar(100),
-@valor2 varchar(100),
-@existe bit output
+create proc if_person_exists
+@paramm varchar(100),
+@paramm1 varchar(100),
+@exist bit output
 as
-	if exists (select nombre from persona where nombre = ltrim(rtrim(@valor)) and apellido = ltrim(rtrim(@valor2)))
+	if exists (select nombre from persona where nombre = ltrim(rtrim(@paramm)) and apellido = ltrim(rtrim(@paramm1)))
 		begin
-			set @existe = 1
+			set @exist = 1
 		end
 	else
 		begin
-			set @existe = 0
+			set @exist = 0
 		end
 
 --Procedimiento Listar libro
