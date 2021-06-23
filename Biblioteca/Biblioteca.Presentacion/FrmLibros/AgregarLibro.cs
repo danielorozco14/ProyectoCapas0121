@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Biblioteca.Presentacion
+namespace Biblioteca.Presentacion.FrmLibros
 {
-    public partial class Form1 : Form
+    public partial class AgregarLibro : Form
     {
-        public Form1()
+        public AgregarLibro()
         {
             InitializeComponent();
+        }
+
+        private void AgregarLibro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
