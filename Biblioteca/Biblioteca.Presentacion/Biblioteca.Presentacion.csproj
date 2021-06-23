@@ -52,6 +52,12 @@
     <Compile Include="FrmLibros\AgregarLibro.Designer.cs">
       <DependentUpon>AgregarLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLibros\BuscarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLibros\BuscarLibro.Designer.cs">
+      <DependentUpon>BuscarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLibros\VerTodoLibros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLibros\AgregarLibro.resx">
       <DependentUpon>AgregarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLibros\BuscarLibro.resx">
+      <DependentUpon>BuscarLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLibros\VerTodoLibros.resx">
       <DependentUpon>VerTodoLibros.cs</DependentUpon>

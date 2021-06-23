@@ -166,5 +166,20 @@ namespace Biblioteca.Presentacion
         {
 
         }
+
+        private void actualizarLibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscarLibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BuscarLibro buscarLibro = new BuscarLibro();
+
+            buscarLibro.MdiParent = this;
+            buscarLibro.Dock = DockStyle.Fill;
+            buscarLibro.Show();
+            buscarLibro.WindowState = FormWindowState.Maximized;
+        }
     }
 }

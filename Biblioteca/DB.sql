@@ -24,8 +24,8 @@ CREATE TABLE rol(
 	estado bit default(1)
 );
 
-insert into rol(nombre,descripcion) values('Administrador','El que adminsitra')
-insert into rol(nombre,descripcion) values('Profesor','El que ensenia')
+insert into rol(nombre,descripcion) values('Administrador','Personal encargado de la administracion del sistema.')
+insert into rol(nombre,descripcion) values('Profesor','Personal que tiene la habilidad de prestar libros en el sistema.')
 
 
 --Tabla Persona
@@ -233,7 +233,7 @@ as
 		end
 	else
 		begin
-			set @exists = 0l
+			set @exists = 0
 		end
 select * from libro
 
@@ -254,7 +254,7 @@ as
 exec libro_existe2 3;
 
 --Procedimiento Listar prestamo
-create proc prestamo_listar
+create proc all_loans
 as
 select prestamo.idpersona as CodigoProfesor,prestamo.idLibro as CodigoLibro,libro.titulo as Libro,persona.nombre + ' '+persona.apellido as Profesor, fechaPrestamo as Fecha_Prestamo, fechaDevolucion as Fecha_Devolucion
 from prestamo inner join persona on prestamo.idpersona = persona.idpersona inner join libro on prestamo.idlibro = libro.idlibro
@@ -297,7 +297,7 @@ insert into prestamo(idpersona,idlibro,fechaPrestamo,fechaDevolucion) values (@i
 go
 
 --Procedimiento Actualizar prestamo
-create proc prestamo_actualizar
+create proc update_loan
 @idpersona int,
 @idlibro int,
 @prestamo varchar(255),
@@ -362,7 +362,7 @@ go
 
 
 --Usuario login
-create proc persona_login
+create proc person_login
 @email varchar(50),
 @clave varchar(50)
 as select persona.idpersona, persona.idrol,rol.nombre as rol,persona.nombre, persona.estado
@@ -393,16 +393,16 @@ delete from persona
 
 delete from prestamo
 
-insert into libro(isbm,autor,titulo) values('a','a','a')
-insert into persona(nombre,apellido,idrol,email,clave) values('Alexis','Mancia','1','alexis@proyecto.com',HASHBYTES('SHA2_256','root'))
-insert into persona(nombre,apellido,idrol,email,clave) values('Daniel','Orozco','2','daniel@selacome.com',HASHBYTES('SHA2_256','root'))
+insert into libro(isbm,autor,titulo) values('AEC-3423','John K.K Willems','Another Day in Hell')
+insert into persona(nombre,apellido,idrol,email,clave) values('Jorge','Oliva','1','jorge@gmail.com',HASHBYTES('SHA2_256','dummy'))
+insert into persona(nombre,apellido,idrol,email,clave) values('Daniel','Orozco','2','daniel@gmail.com',HASHBYTES('SHA2_256','dummy'))
 
-insert into persona(nombre,apellido) values('Moises','Daniel')
+insert into persona(nombre,apellido) values('Ssandro','Ortiz')
 insert into persona(nombre,apellido) values('Daniel','Orozco')
-insert into persona(nombre,apellido) values('Maria','Moran')
+insert into persona(nombre,apellido) values('Diego','Gomez')
 
 exec prestamo_desactivar 6,7;
 
 select * from prestamo
 
-create database dbNCapasProyecto;
+create database ProyectoCapas;
