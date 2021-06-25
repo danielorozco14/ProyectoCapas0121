@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.txtBoxTitulo = new System.Windows.Forms.TextBox();
             this.txtBoxAutor = new System.Windows.Forms.TextBox();
@@ -55,7 +56,31 @@
             this.txtBoxISBM = new System.Windows.Forms.TextBox();
             this.addBooksDG = new System.Windows.Forms.DataGridView();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider11 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider12 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.addBooksDG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddBook
@@ -295,6 +320,54 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.ContainerControl = this;
+            // 
+            // errorProvider8
+            // 
+            this.errorProvider8.ContainerControl = this;
+            // 
+            // errorProvider9
+            // 
+            this.errorProvider9.ContainerControl = this;
+            // 
+            // errorProvider10
+            // 
+            this.errorProvider10.ContainerControl = this;
+            // 
+            // errorProvider11
+            // 
+            this.errorProvider11.ContainerControl = this;
+            // 
+            // errorProvider12
+            // 
+            this.errorProvider12.ContainerControl = this;
+            // 
             // AgregarLibro
             // 
             this.AcceptButton = this.btnAddBook;
@@ -334,6 +407,18 @@
             this.Text = "Libros - Agregar Libro";
             this.Load += new System.EventHandler(this.AgregarLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.addBooksDG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,5 +453,17 @@
         private System.Windows.Forms.TextBox txtBoxISBM;
         private System.Windows.Forms.DataGridView addBooksDG;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
+        private System.Windows.Forms.ErrorProvider errorProvider8;
+        private System.Windows.Forms.ErrorProvider errorProvider9;
+        private System.Windows.Forms.ErrorProvider errorProvider10;
+        private System.Windows.Forms.ErrorProvider errorProvider11;
+        private System.Windows.Forms.ErrorProvider errorProvider12;
     }
 }
