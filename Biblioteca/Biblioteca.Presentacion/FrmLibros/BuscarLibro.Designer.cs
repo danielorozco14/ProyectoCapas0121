@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.getFindParamLibro = new System.Windows.Forms.TextBox();
             this.findBookLabel = new System.Windows.Forms.Label();
             this.buscarLibroButton = new System.Windows.Forms.Button();
             this.resultDGLibros = new System.Windows.Forms.DataGridView();
             this.countResultLibros = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.resultDGLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // getFindParamLibro
@@ -44,6 +47,7 @@
             this.getFindParamLibro.Name = "getFindParamLibro";
             this.getFindParamLibro.Size = new System.Drawing.Size(451, 20);
             this.getFindParamLibro.TabIndex = 0;
+            this.getFindParamLibro.TextChanged += new System.EventHandler(this.getFindParamLibro_TextChanged);
             // 
             // findBookLabel
             // 
@@ -94,6 +98,10 @@
             this.countResultLibros.TabIndex = 4;
             this.countResultLibros.Text = "Filas: 0";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // BuscarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -108,6 +116,7 @@
             this.Name = "BuscarLibro";
             this.Text = "BuscarLibro";
             ((System.ComponentModel.ISupportInitialize)(this.resultDGLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +129,6 @@
         private System.Windows.Forms.Button buscarLibroButton;
         private System.Windows.Forms.DataGridView resultDGLibros;
         private System.Windows.Forms.Label countResultLibros;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
