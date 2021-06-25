@@ -13,7 +13,7 @@ namespace Biblioteca.Entidades
         public string titulo { get; set; }
         public string autor { get; set; }
         public string editorial { get; set; }
-        public string anioEdicion { get; set; }
+        public DateTime anioEdicion { get; set; }
         public string numeroEdicion { get; set; }
         public string pais { get; set; }
         public string idioma { get; set; }

@@ -265,7 +265,6 @@ namespace Biblioteca.Datos
                 SqlCommand sqlCommand = new SqlCommand("update_book", sqlConnection);
 
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                //Comando.CommandType = CommandType.StoredProcedure;
 
                 sqlCommand.Parameters.Add("@IdLibro", SqlDbType.Int).Value = book.idLibro;
                 sqlCommand.Parameters.Add("@isbm", SqlDbType.VarChar).Value =book.isbm;
