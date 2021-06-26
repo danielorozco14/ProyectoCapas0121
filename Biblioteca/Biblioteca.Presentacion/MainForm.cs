@@ -169,7 +169,12 @@ namespace Biblioteca.Presentacion
 
         private void actualizarLibroToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ActualizarLibro actualizarLibro = new ActualizarLibro();
 
+            actualizarLibro.MdiParent = this;
+            actualizarLibro.Dock = DockStyle.Fill;
+            actualizarLibro.Show();
+            actualizarLibro.WindowState = FormWindowState.Maximized;
         }
 
         private void buscarLibroToolStripMenuItem_Click(object sender, EventArgs e)

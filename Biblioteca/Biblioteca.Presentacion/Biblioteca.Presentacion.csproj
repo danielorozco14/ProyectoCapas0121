@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmLibros\ActualizarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLibros\ActualizarLibro.Designer.cs">
+      <DependentUpon>ActualizarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLibros\AgregarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmLibros\ActualizarLibro.resx">
+      <DependentUpon>ActualizarLibro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLibros\AgregarLibro.resx">
       <DependentUpon>AgregarLibro.cs</DependentUpon>
     </EmbeddedResource>
