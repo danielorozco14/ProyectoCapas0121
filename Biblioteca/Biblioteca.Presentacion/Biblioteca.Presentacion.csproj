@@ -64,6 +64,12 @@
     <Compile Include="FrmLibros\BuscarLibro.Designer.cs">
       <DependentUpon>BuscarLibro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLibros\EliminarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLibros\EliminarLibro.Designer.cs">
+      <DependentUpon>EliminarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLibros\VerTodoLibros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLibros\BuscarLibro.resx">
       <DependentUpon>BuscarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLibros\EliminarLibro.resx">
+      <DependentUpon>EliminarLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLibros\VerTodoLibros.resx">
       <DependentUpon>VerTodoLibros.cs</DependentUpon>

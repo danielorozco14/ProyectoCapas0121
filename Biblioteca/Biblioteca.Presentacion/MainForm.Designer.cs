@@ -171,6 +171,7 @@
             this.eliminarLibroToolStripMenuItem.Name = "eliminarLibroToolStripMenuItem";
             this.eliminarLibroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarLibroToolStripMenuItem.Text = "Eliminar Libro";
+            this.eliminarLibroToolStripMenuItem.Click += new System.EventHandler(this.eliminarLibroToolStripMenuItem_Click);
             // 
             // buscarLibroToolStripMenuItem
             // 

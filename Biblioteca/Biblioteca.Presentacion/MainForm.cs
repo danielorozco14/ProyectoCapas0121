@@ -186,5 +186,16 @@ namespace Biblioteca.Presentacion
             buscarLibro.Show();
             buscarLibro.WindowState = FormWindowState.Maximized;
         }
+
+        private void eliminarLibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EliminarLibro eliminarLibro = new EliminarLibro();
+
+            eliminarLibro.MdiParent = this;
+            eliminarLibro.Dock = DockStyle.Fill;
+            eliminarLibro.Show();
+            eliminarLibro.WindowState = FormWindowState.Maximized;
+
+        }
     }
 }
