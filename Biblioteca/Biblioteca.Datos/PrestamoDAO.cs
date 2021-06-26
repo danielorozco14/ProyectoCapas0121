@@ -22,7 +22,7 @@ namespace Biblioteca.Datos
             try
             {
                 sqlConnection = Conexion.getInstance().createConnection();
-                SqlCommand sqlCommand = new SqlCommand("list_loans", sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("all_loans", sqlConnection);
 
                 sqlConnection.Open();
 

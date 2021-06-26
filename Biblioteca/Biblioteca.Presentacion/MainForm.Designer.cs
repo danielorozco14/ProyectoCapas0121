@@ -49,7 +49,6 @@
             this.prestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodoPrestamosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.crearUnPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarUnPrestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarUnPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devolucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -148,35 +147,35 @@
             // verTodoLibrosToolStripMenuItem
             // 
             this.verTodoLibrosToolStripMenuItem.Name = "verTodoLibrosToolStripMenuItem";
-            this.verTodoLibrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verTodoLibrosToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.verTodoLibrosToolStripMenuItem.Text = "Todos los Libros...";
             this.verTodoLibrosToolStripMenuItem.Click += new System.EventHandler(this.verTodoToolStripMenuItem_Click);
             // 
             // agregarLibroToolStripMenuItem
             // 
             this.agregarLibroToolStripMenuItem.Name = "agregarLibroToolStripMenuItem";
-            this.agregarLibroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarLibroToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.agregarLibroToolStripMenuItem.Text = "Agregar Libro";
             this.agregarLibroToolStripMenuItem.Click += new System.EventHandler(this.agregarLibroToolStripMenuItem_Click);
             // 
             // actualizarLibroToolStripMenuItem
             // 
             this.actualizarLibroToolStripMenuItem.Name = "actualizarLibroToolStripMenuItem";
-            this.actualizarLibroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.actualizarLibroToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.actualizarLibroToolStripMenuItem.Text = "Actualizar Libro";
             this.actualizarLibroToolStripMenuItem.Click += new System.EventHandler(this.actualizarLibroToolStripMenuItem_Click);
             // 
             // eliminarLibroToolStripMenuItem
             // 
             this.eliminarLibroToolStripMenuItem.Name = "eliminarLibroToolStripMenuItem";
-            this.eliminarLibroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarLibroToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.eliminarLibroToolStripMenuItem.Text = "Eliminar Libro";
             this.eliminarLibroToolStripMenuItem.Click += new System.EventHandler(this.eliminarLibroToolStripMenuItem_Click);
             // 
             // buscarLibroToolStripMenuItem
             // 
             this.buscarLibroToolStripMenuItem.Name = "buscarLibroToolStripMenuItem";
-            this.buscarLibroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarLibroToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.buscarLibroToolStripMenuItem.Text = "Buscar Libro";
             this.buscarLibroToolStripMenuItem.Click += new System.EventHandler(this.buscarLibroToolStripMenuItem_Click);
             // 
@@ -185,7 +184,6 @@
             this.prestamosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verTodoPrestamosToolStripMenuItem1,
             this.crearUnPrestamoToolStripMenuItem,
-            this.actualizarUnPrestamosToolStripMenuItem,
             this.buscarUnPrestamoToolStripMenuItem});
             this.prestamosToolStripMenuItem.Name = "prestamosToolStripMenuItem";
             this.prestamosToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
@@ -204,13 +202,6 @@
             this.crearUnPrestamoToolStripMenuItem.Name = "crearUnPrestamoToolStripMenuItem";
             this.crearUnPrestamoToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.crearUnPrestamoToolStripMenuItem.Text = "Crear un prestamo";
-            // 
-            // actualizarUnPrestamosToolStripMenuItem
-            // 
-            this.actualizarUnPrestamosToolStripMenuItem.Name = "actualizarUnPrestamosToolStripMenuItem";
-            this.actualizarUnPrestamosToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.actualizarUnPrestamosToolStripMenuItem.Text = "Actualizar un prestamo";
-            this.actualizarUnPrestamosToolStripMenuItem.Click += new System.EventHandler(this.actualizarUnPrestamosToolStripMenuItem_Click);
             // 
             // buscarUnPrestamoToolStripMenuItem
             // 
@@ -274,7 +265,6 @@
         private System.Windows.Forms.ToolStripMenuItem prestamosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verTodoPrestamosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem crearUnPrestamoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem actualizarUnPrestamosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarUnPrestamoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devolucionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelarPrestamoToolStripMenuItem;

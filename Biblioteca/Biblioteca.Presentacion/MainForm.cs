@@ -1,4 +1,5 @@
 ﻿using Biblioteca.Presentacion.FrmLibros;
+using Biblioteca.Presentacion.FrmPrestamos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -164,7 +165,12 @@ namespace Biblioteca.Presentacion
 
         private void verTodoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            VerTodoPrestamos todoPrestamos = new VerTodoPrestamos();
 
+            todoPrestamos.MdiParent = this;
+            todoPrestamos.Dock = DockStyle.Fill;
+            todoPrestamos.Show();
+            todoPrestamos.WindowState = FormWindowState.Maximized;
         }
 
         private void actualizarLibroToolStripMenuItem_Click(object sender, EventArgs e)
