@@ -271,7 +271,7 @@ namespace Biblioteca.Datos
                 sqlCommand.Parameters.Add("@titulo", SqlDbType.VarChar).Value =book.titulo;
                 sqlCommand.Parameters.Add("@autor", SqlDbType.VarChar).Value =book.autor;
                 sqlCommand.Parameters.Add("@editorial", SqlDbType.VarChar).Value =book.editorial;
-                sqlCommand.Parameters.Add("@anioEdicion", SqlDbType.VarChar).Value =book.anioEdicion;
+                sqlCommand.Parameters.Add("@anioEdicion", SqlDbType.Date).Value =book.anioEdicion;
                 sqlCommand.Parameters.Add("@numeroEdicion", SqlDbType.VarChar).Value = book.numeroEdicion;
                 sqlCommand.Parameters.Add("@pais", SqlDbType.VarChar).Value =book.pais;
                 sqlCommand.Parameters.Add("@idioma", SqlDbType.VarChar).Value =book.idioma;

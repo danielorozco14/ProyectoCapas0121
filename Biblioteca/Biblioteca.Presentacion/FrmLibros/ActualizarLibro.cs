@@ -21,12 +21,12 @@ namespace Biblioteca.Presentacion.FrmLibros
 
         private void errorMessage(string mssg)
         {
-            MessageBox.Show(mssg, "Biblioteca - Agregar Libro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(mssg, "Biblioteca - Actualizar Libro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void okayMessage(string mssg)
         {
-            MessageBox.Show(mssg, "Biblioteca - Agregar Libro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mssg, "Biblioteca - Actualizar Libro", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private bool formIsEmpty()

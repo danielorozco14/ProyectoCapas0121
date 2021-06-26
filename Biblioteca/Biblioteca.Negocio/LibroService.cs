@@ -93,7 +93,7 @@ namespace Biblioteca.Negocio
                 book.autor = autor;
                 book.isbm = isbm;
                 book.editorial = editorial;
-                book.anioEdicion = new DateTime(Convert.ToInt32(anioEdicion));
+                book.anioEdicion = new DateTime(Convert.ToInt32(anioEdicion),1,1);
                 book.numeroEdicion = numeroEdicion;
                 book.pais = pais;
                 book.idioma = idioma;
