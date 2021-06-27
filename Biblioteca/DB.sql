@@ -371,27 +371,6 @@ where persona.email=@email and persona.clave=HASHBYTES('SHA2_256',@clave)
 go
 
 
-DECLARE @pruebaroot varbinary = HASHBYTES('SHA2_256','root')
-print @pruebaroot
-
-
-exec persona_login 'alexis@proyecto.com','root';
-
-create proc libro_seleccionar
-as
-select * from libro
-select * from rol
-
-select * from persona
-where persona.nombre = 'ALEXIS'
-
-select * from prestamo
-
-
-delete from persona
-
-
-delete from prestamo
 
 insert into libro(isbm,autor,titulo) values('AEC-3423','John K.K Willems','Another Day in Hell')
 insert into persona(nombre,apellido,idrol,email,clave) values('Jorge','Oliva','1','jorge@gmail.com',HASHBYTES('SHA2_256','dummy'))

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Negocio
 {
-    class PersonaService
+    public class PersonaService
     {
         private static PersonaDAO personaDAO = new PersonaDAO();
 

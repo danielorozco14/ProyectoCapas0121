@@ -188,7 +188,14 @@ namespace Biblioteca.Presentacion.FrmLibros
 
         private void ActualizarLibro_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = LibroService.allBooks();
+            try
+            {
+                dataGridView1.DataSource = LibroService.allBooks();
+
+            }catch(Exception ex)
+            {
+                this.errorMessage(ex.Message + ex.StackTrace);
+            }
         }
 
 

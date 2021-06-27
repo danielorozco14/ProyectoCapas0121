@@ -21,3 +21,4 @@ C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca
 C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.FrmLibros.ActualizarLibro.resources
 C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.FrmLibros.EliminarLibro.resources
 C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.FrmPrestamos.VerTodoPrestamos.resources
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.FrmPrestamos.AgregarPrestamo.resources

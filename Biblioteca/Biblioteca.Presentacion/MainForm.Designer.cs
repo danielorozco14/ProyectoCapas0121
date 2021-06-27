@@ -202,6 +202,7 @@
             this.crearUnPrestamoToolStripMenuItem.Name = "crearUnPrestamoToolStripMenuItem";
             this.crearUnPrestamoToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.crearUnPrestamoToolStripMenuItem.Text = "Crear un prestamo";
+            this.crearUnPrestamoToolStripMenuItem.Click += new System.EventHandler(this.crearUnPrestamoToolStripMenuItem_Click);
             // 
             // buscarUnPrestamoToolStripMenuItem
             // 

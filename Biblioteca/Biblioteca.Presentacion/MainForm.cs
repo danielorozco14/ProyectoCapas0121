@@ -203,5 +203,14 @@ namespace Biblioteca.Presentacion
             eliminarLibro.WindowState = FormWindowState.Maximized;
 
         }
+
+        private void crearUnPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AgregarPrestamo agregarPrestamo = new AgregarPrestamo();
+            agregarPrestamo.MdiParent = this;
+            agregarPrestamo.Dock = DockStyle.Fill;
+            agregarPrestamo.Show();
+            agregarPrestamo.WindowState = FormWindowState.Maximized;
+        }
     }
 }
