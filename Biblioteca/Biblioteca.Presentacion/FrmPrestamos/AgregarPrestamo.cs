@@ -69,6 +69,8 @@ namespace Biblioteca.Presentacion.FrmPrestamos
         {
             txtBoxIdProfesor.Text = Convert.ToString(tableProfesores.CurrentRow.Cells["Codigo"].Value);
             txtBoxNombreProfesor.Text = Convert.ToString(tableProfesores.CurrentRow.Cells["Nombre"].Value);
+            txtBoxApellidoProfesor.Text = Convert.ToString(tableProfesores.CurrentRow.Cells["Apellido"].Value);
+
         }
 
         private void tableLibrosSinPrestar_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
