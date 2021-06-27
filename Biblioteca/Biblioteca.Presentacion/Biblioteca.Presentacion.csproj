@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDevolucion\CancelarPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDevolucion\CancelarPrestamo.Designer.cs">
+      <DependentUpon>CancelarPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLibros\ActualizarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDevolucion\CancelarPrestamo.resx">
+      <DependentUpon>CancelarPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLibros\ActualizarLibro.resx">
       <DependentUpon>ActualizarLibro.cs</DependentUpon>
     </EmbeddedResource>

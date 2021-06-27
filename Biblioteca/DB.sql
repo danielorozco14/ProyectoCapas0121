@@ -267,7 +267,7 @@ create proc list_proffesor_loans
 @paramm int
 as
 select prestamo.idpersona as CodigoProfesor,prestamo.idLibro as CodigoLibro,libro.titulo as Libro,persona.nombre + ' '+persona.apellido as Profesor,
-	libro.titulo as Libro, fechaPrestamo as Fecha_Prestamo, 
+	fechaPrestamo as Fecha_Prestamo, 
 	fechaDevolucion as Fecha_Devolucion
 from prestamo inner join persona on prestamo.idpersona = persona.idpersona inner join libro on prestamo.idlibro = libro.idlibro
 where prestamo.estado = 1 and prestamo.idpersona = @paramm
@@ -306,16 +306,6 @@ create proc update_loan
 as
 update prestamo set idpersona=@idpersona, idlibro=@idlibro, fechaDevolucion=@devol, fechaPrestamo=@prestamo, estado=@estado
 where idpersona=@idpersona and idlibro=@idlibro
-go
-
---Procedimiento Eliminar prestamo
---Este nunca se va a usar
-create proc delete_loan
-@idlibro int,
-@idpersona int
-as
-delete from prestamo
-where idlibro=@idlibro and idpersona=@idpersona
 go
 
 
@@ -360,7 +350,7 @@ update prestamo set estado=0
 where idlibro = @IdLibro and idpersona = @Idpersona
 go
 
-
+SELECT * FROM PRESTAMO;
 --Usuario login
 create proc person_login
 @email varchar(50),

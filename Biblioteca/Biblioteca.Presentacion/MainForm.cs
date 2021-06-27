@@ -1,5 +1,7 @@
 ﻿using Biblioteca.Presentacion.FrmLibros;
 using Biblioteca.Presentacion.FrmPrestamos;
+using Biblioteca.Presentacion.FrmDevolucion;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -123,6 +125,12 @@ namespace Biblioteca.Presentacion
 
         private void devolverUnLibroToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CancelarPrestamo cancelarPrestamo = new CancelarPrestamo();
+
+            cancelarPrestamo.MdiParent = this;
+            cancelarPrestamo.Dock = DockStyle.Fill;
+            cancelarPrestamo.Show();
+            cancelarPrestamo.WindowState = FormWindowState.Maximized;
 
         }
 
@@ -133,8 +141,7 @@ namespace Biblioteca.Presentacion
             
             agregarLibro.MdiParent = this;
             agregarLibro.Dock = DockStyle.Fill;
-            int formsSize = this.MdiChildren.OfType<Form>().ToList().Count;
-    
+          
             agregarLibro.Show();
             agregarLibro.WindowState = FormWindowState.Maximized;
         }

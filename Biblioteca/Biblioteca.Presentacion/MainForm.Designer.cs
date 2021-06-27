@@ -49,7 +49,6 @@
             this.prestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodoPrestamosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.crearUnPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarUnPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devolucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
@@ -183,8 +182,7 @@
             // 
             this.prestamosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.verTodoPrestamosToolStripMenuItem1,
-            this.crearUnPrestamoToolStripMenuItem,
-            this.buscarUnPrestamoToolStripMenuItem});
+            this.crearUnPrestamoToolStripMenuItem});
             this.prestamosToolStripMenuItem.Name = "prestamosToolStripMenuItem";
             this.prestamosToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
             this.prestamosToolStripMenuItem.Text = "Prestamos";
@@ -203,12 +201,6 @@
             this.crearUnPrestamoToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.crearUnPrestamoToolStripMenuItem.Text = "Crear un prestamo";
             this.crearUnPrestamoToolStripMenuItem.Click += new System.EventHandler(this.crearUnPrestamoToolStripMenuItem_Click);
-            // 
-            // buscarUnPrestamoToolStripMenuItem
-            // 
-            this.buscarUnPrestamoToolStripMenuItem.Name = "buscarUnPrestamoToolStripMenuItem";
-            this.buscarUnPrestamoToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.buscarUnPrestamoToolStripMenuItem.Text = "Buscar un prestamo";
             // 
             // devolucionToolStripMenuItem
             // 
@@ -266,7 +258,6 @@
         private System.Windows.Forms.ToolStripMenuItem prestamosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verTodoPrestamosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem crearUnPrestamoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarUnPrestamoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devolucionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelarPrestamoToolStripMenuItem;
     }
