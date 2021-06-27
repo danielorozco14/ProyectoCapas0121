@@ -1,7 +1,7 @@
 ﻿using Biblioteca.Presentacion.FrmLibros;
 using Biblioteca.Presentacion.FrmPrestamos;
 using Biblioteca.Presentacion.FrmDevolucion;
-
+using Biblioteca.Presentacion.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -218,6 +218,15 @@ namespace Biblioteca.Presentacion
             agregarPrestamo.Dock = DockStyle.Fill;
             agregarPrestamo.Show();
             agregarPrestamo.WindowState = FormWindowState.Maximized;
+        }
+
+        private void reporteDePrestamosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReportePrestamos frmReportePrestamos = new FrmReportePrestamos();
+            frmReportePrestamos.MdiParent = this;
+            frmReportePrestamos.Dock = DockStyle.Fill;
+            frmReportePrestamos.Show();
+            frmReportePrestamos.WindowState = FormWindowState.Maximized;
         }
     }
 }

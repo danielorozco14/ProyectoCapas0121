@@ -123,14 +123,16 @@ namespace Biblioteca.Presentacion.FrmDevolucion
 
 
                     response = PrestamoService.deactivateLoan(idLibro, idProfesor);
+                    Console.WriteLine(  response);
 
                     if(response.Equals("Prestamo desactivado correctamente"))
                     {
                         if(LibroService.activateBook(idLibro).Equals("Libro Activado"))
                         {
-                            this.clean();
+                            
                             dataGridView2.DataSource = PrestamoService.listProffesorLoan(idProfesor);
                             this.okayMessage("Libro devuelto correctamente");
+                            this.clean();
                         }
                         else
                         {

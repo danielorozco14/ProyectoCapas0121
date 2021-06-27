@@ -14,7 +14,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D6FB79E3-2286-4FD2-B9F1-0AB1DF4113C5}"
 	ProjectSection(SolutionItems) = preProject
 		DB.sql = DB.sql
-		..\..\..\..\Downloads\NcapasProyectv2.sql = ..\..\..\..\Downloads\NcapasProyectv2.sql
 	EndProjectSection
 EndProject
 Global

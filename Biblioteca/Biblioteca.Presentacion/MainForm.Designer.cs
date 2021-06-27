@@ -51,6 +51,9 @@
             this.crearUnPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devolucionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelarPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDePrestamosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeLibrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -123,6 +126,7 @@
             this.librosToolStripMenuItem,
             this.prestamosToolStripMenuItem,
             this.devolucionToolStripMenuItem,
+            this.reportesToolStripMenuItem,
             this.helpMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -217,6 +221,28 @@
             this.cancelarPrestamoToolStripMenuItem.Text = "Cancelar prestamo";
             this.cancelarPrestamoToolStripMenuItem.Click += new System.EventHandler(this.devolverUnLibroToolStripMenuItem_Click);
             // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteDePrestamosToolStripMenuItem,
+            this.reporteDeLibrosToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // reporteDePrestamosToolStripMenuItem
+            // 
+            this.reporteDePrestamosToolStripMenuItem.Name = "reporteDePrestamosToolStripMenuItem";
+            this.reporteDePrestamosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.reporteDePrestamosToolStripMenuItem.Text = "Reporte de Prestamos";
+            this.reporteDePrestamosToolStripMenuItem.Click += new System.EventHandler(this.reporteDePrestamosToolStripMenuItem_Click);
+            // 
+            // reporteDeLibrosToolStripMenuItem
+            // 
+            this.reporteDeLibrosToolStripMenuItem.Name = "reporteDeLibrosToolStripMenuItem";
+            this.reporteDeLibrosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.reporteDeLibrosToolStripMenuItem.Text = "Reporte de Libros";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +286,9 @@
         private System.Windows.Forms.ToolStripMenuItem crearUnPrestamoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devolucionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelarPrestamoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDePrestamosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDeLibrosToolStripMenuItem;
     }
 }
 
