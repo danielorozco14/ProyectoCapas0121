@@ -223,10 +223,7 @@ namespace Biblioteca.Presentacion
         private void reporteDePrestamosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmReportePrestamos frmReportePrestamos = new FrmReportePrestamos();
-            frmReportePrestamos.MdiParent = this;
-            frmReportePrestamos.Dock = DockStyle.Fill;
-            frmReportePrestamos.Show();
-            frmReportePrestamos.WindowState = FormWindowState.Maximized;
+            frmReportePrestamos.ShowDialog();
         }
     }
 }

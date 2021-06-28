@@ -28,18 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataSetPrestamos = new Biblioteca.Presentacion.Reportes.DataSets.DataSetPrestamos();
+            this.allloansBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.all_loansTableAdapter = new Biblioteca.Presentacion.Reportes.DataSets.DataSetPrestamosTableAdapters.all_loansTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPrestamos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allloansBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Biblioteca.Presentacion.Reportes.ReportePrestamo.rdlc";
+            reportDataSource1.Name = "DataSetPrestamosActivos";
+            reportDataSource1.Value = this.allloansBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Biblioteca.Presentacion.Reportes.ReportePrestamosActivos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1064, 539);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // dataSetPrestamos
+            // 
+            this.dataSetPrestamos.DataSetName = "DataSetPrestamos";
+            this.dataSetPrestamos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // allloansBindingSource
+            // 
+            this.allloansBindingSource.DataMember = "all_loans";
+            this.allloansBindingSource.DataSource = this.dataSetPrestamos;
+            // 
+            // all_loansTableAdapter
+            // 
+            this.all_loansTableAdapter.ClearBeforeFill = true;
             // 
             // FrmReportePrestamos
             // 
@@ -50,6 +74,8 @@
             this.Name = "FrmReportePrestamos";
             this.Text = "FrmReportePrestamos";
             this.Load += new System.EventHandler(this.FrmReportePrestamos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetPrestamos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allloansBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -57,5 +83,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DataSets.DataSetPrestamos dataSetPrestamos;
+        private System.Windows.Forms.BindingSource allloansBindingSource;
+        private DataSets.DataSetPrestamosTableAdapters.all_loansTableAdapter all_loansTableAdapter;
     }
 }
