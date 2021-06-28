@@ -21,11 +21,16 @@ namespace Biblioteca.Presentacion
         public void isProfesor(string nombreProfesor)
         {
             librosToolStripMenuItem.Enabled = true;
+            actualizarLibroToolStripMenuItem.Enabled = false;
+            eliminarLibroToolStripMenuItem.Enabled = false;
+            agregarLibroToolStripMenuItem.Enabled = false;
+            buscarLibroToolStripMenuItem.Enabled = false;
+
             prestamosToolStripMenuItem.Enabled = false;
             devolucionToolStripMenuItem.Enabled = false;
             reportesToolStripMenuItem.Enabled = false;
 
-            toolStripStatusLabel.Text = "Sesion: " + nombreProfesor;
+            toolStripStatusLabel.Text = "Sesion: " + nombreProfesor + "(Profesor)";
             
         }
 
@@ -36,7 +41,7 @@ namespace Biblioteca.Presentacion
             devolucionToolStripMenuItem.Enabled = true;
             reporteDeLibrosToolStripMenuItem.Enabled = true;
 
-            toolStripStatusLabel.Text = "Sesion: " + nombreAdmin;
+            toolStripStatusLabel.Text = "Sesion: " + nombreAdmin + "(Administrador)";
         }
 
         public MainForm()

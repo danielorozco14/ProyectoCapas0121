@@ -238,21 +238,6 @@ as
 select * from libro
 
 
---PRUEBA
-create proc libro_existe2
-@valor int
-as
-	if exists (select idlibro from libro where idlibro = ltrim(rtrim(@valor)))
-		begin
-			Print 'Existe'
-		end
-	else
-		begin
-			print 'No existe'
-		end
-
-exec libro_existe2 3;
-
 --Procedimiento Listar prestamo
 create proc all_loans
 as
@@ -365,6 +350,8 @@ go
 insert into libro(isbm,autor,titulo) values('AEC-3423','John K.K Willems','Another Day in Hell')
 insert into persona(nombre,apellido,idrol,email,clave) values('Jorge','Oliva','1','jorge@gmail.com',HASHBYTES('SHA2_256','dummy'))
 insert into persona(nombre,apellido,idrol,email,clave) values('Daniel','Orozco','2','daniel@gmail.com',HASHBYTES('SHA2_256','dummy'))
+insert into persona(nombre,apellido,idrol,email,clave) values('Diego','Gomez','1','diego@gmail.com',HASHBYTES('SHA2_256','dummy'))
+
 
 insert into persona(nombre,apellido) values('Ssandro','Ortiz')
 insert into persona(nombre,apellido) values('Daniel','Orozco')

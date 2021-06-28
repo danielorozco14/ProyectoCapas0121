@@ -85,7 +85,7 @@
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(455, 247);
+            this.btnAddBook.Location = new System.Drawing.Point(598, 247);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(187, 28);
             this.btnAddBook.TabIndex = 0;
@@ -102,8 +102,6 @@
             // 
             // txtBoxAutor
             // 
-            this.txtBoxAutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxAutor.Location = new System.Drawing.Point(240, 70);
             this.txtBoxAutor.Name = "txtBoxAutor";
             this.txtBoxAutor.Size = new System.Drawing.Size(137, 20);
@@ -118,8 +116,6 @@
             // 
             // txtBoxNumEdicion
             // 
-            this.txtBoxNumEdicion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxNumEdicion.Location = new System.Drawing.Point(240, 122);
             this.txtBoxNumEdicion.Name = "txtBoxNumEdicion";
             this.txtBoxNumEdicion.Size = new System.Drawing.Size(137, 20);
@@ -127,7 +123,6 @@
             // 
             // txtBoxMateria
             // 
-            this.txtBoxMateria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxMateria.Location = new System.Drawing.Point(681, 122);
             this.txtBoxMateria.Name = "txtBoxMateria";
             this.txtBoxMateria.Size = new System.Drawing.Size(137, 20);
@@ -135,8 +130,6 @@
             // 
             // txtBoxIdioma
             // 
-            this.txtBoxIdioma.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxIdioma.Location = new System.Drawing.Point(240, 177);
             this.txtBoxIdioma.Name = "txtBoxIdioma";
             this.txtBoxIdioma.Size = new System.Drawing.Size(137, 20);
@@ -252,7 +245,6 @@
             // 
             // txtBoxDescripcion
             // 
-            this.txtBoxDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxDescripcion.Location = new System.Drawing.Point(681, 177);
             this.txtBoxDescripcion.Multiline = true;
             this.txtBoxDescripcion.Name = "txtBoxDescripcion";
@@ -282,7 +274,6 @@
             // 
             // txtBoxEditorial
             // 
-            this.txtBoxEditorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBoxEditorial.Location = new System.Drawing.Point(681, 70);
             this.txtBoxEditorial.Name = "txtBoxEditorial";
             this.txtBoxEditorial.Size = new System.Drawing.Size(137, 20);
@@ -306,13 +297,13 @@
             this.addBooksDG.Location = new System.Drawing.Point(36, 296);
             this.addBooksDG.Name = "addBooksDG";
             this.addBooksDG.ReadOnly = true;
-            this.addBooksDG.Size = new System.Drawing.Size(782, 142);
+            this.addBooksDG.Size = new System.Drawing.Size(806, 142);
             this.addBooksDG.TabIndex = 25;
             this.addBooksDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.addBooksDG_CellContentClick);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(217, 247);
+            this.btnLimpiar.Location = new System.Drawing.Point(315, 247);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(188, 28);
             this.btnLimpiar.TabIndex = 26;
