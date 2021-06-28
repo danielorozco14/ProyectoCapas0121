@@ -229,6 +229,8 @@ namespace Biblioteca.Presentacion
         private void reporteDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Load ReporteLibros
+            FrmReporteLibros frmReporteLibros = new FrmReporteLibros();
+            frmReporteLibros.ShowDialog();
         }
     }
 }

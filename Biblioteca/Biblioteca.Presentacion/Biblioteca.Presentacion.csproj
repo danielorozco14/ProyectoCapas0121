@@ -121,10 +121,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\DataSets\DataSetLibros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetLibros.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DataSets\DataSetPrestamos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPrestamos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmReporteLibros.Designer.cs">
+      <DependentUpon>FrmReporteLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\FrmReportePrestamos.cs">
       <SubType>Form</SubType>
@@ -169,9 +180,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reportes\FrmReporteLibros.resx">
+      <DependentUpon>FrmReporteLibros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\FrmReportePrestamos.resx">
       <DependentUpon>FrmReportePrestamos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteLibros.rdlc" />
     <EmbeddedResource Include="Reportes\ReportePrestamosActivos.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -183,6 +198,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reportes\DataSets\DataSetLibros.xsc">
+      <DependentUpon>DataSetLibros.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSets\DataSetLibros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetLibros.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSets\DataSetLibros.xss">
+      <DependentUpon>DataSetLibros.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\DataSets\DataSetPrestamos.xsc">
       <DependentUpon>DataSetPrestamos.xsd</DependentUpon>
     </None>

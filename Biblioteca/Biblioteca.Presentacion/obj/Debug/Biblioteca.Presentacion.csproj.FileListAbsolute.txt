@@ -92,3 +92,4 @@ C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca
 C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.Reportes.FrmReportePrestamos.resources
 C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\RdlCompile.cache
 C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\RdlCompile.compiled
+C:\Users\usuario\Desktop\CAPAS 0121\ProyectoCapas01\ProyectoCapas0121\Biblioteca\Biblioteca.Presentacion\obj\Debug\Biblioteca.Presentacion.Reportes.FrmReporteLibros.resources
