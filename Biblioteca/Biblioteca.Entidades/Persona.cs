@@ -18,6 +18,8 @@ namespace Biblioteca.Entidades
         public string telefono { get; set; }
         public int idRol { get; set; }
 
+        public bool estado { get; set; }
+
         public Persona() {}
 
     }

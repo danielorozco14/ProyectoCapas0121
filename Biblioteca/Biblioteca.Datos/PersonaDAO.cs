@@ -216,7 +216,7 @@ namespace Biblioteca.Datos
             {
                 sqlConnection = Conexion.getInstance().createConnection();
                 
-                SqlCommand sqlCommand = new SqlCommand("login_person", sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("person_login", sqlConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.Add("@email", SqlDbType.VarChar).Value = Email;
                 sqlCommand.Parameters.Add("@clave", SqlDbType.VarChar).Value = Clave;

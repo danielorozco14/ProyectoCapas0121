@@ -18,6 +18,27 @@ namespace Biblioteca.Presentacion
     {
         private int childFormNumber = 0;
 
+        public void isProfesor(string nombreProfesor)
+        {
+            librosToolStripMenuItem.Enabled = true;
+            prestamosToolStripMenuItem.Enabled = false;
+            devolucionToolStripMenuItem.Enabled = false;
+            reportesToolStripMenuItem.Enabled = false;
+
+            toolStripStatusLabel.Text = "Sesion: " + nombreProfesor;
+            
+        }
+
+        public void isAdmin(string nombreAdmin)
+        {
+            librosToolStripMenuItem.Enabled = true;
+            prestamosToolStripMenuItem.Enabled = true;
+            devolucionToolStripMenuItem.Enabled = true;
+            reporteDeLibrosToolStripMenuItem.Enabled = true;
+
+            toolStripStatusLabel.Text = "Sesion: " + nombreAdmin;
+        }
+
         public MainForm()
         {
             InitializeComponent();
@@ -148,7 +169,7 @@ namespace Biblioteca.Presentacion
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -231,6 +252,11 @@ namespace Biblioteca.Presentacion
             //Load ReporteLibros
             FrmReporteLibros frmReporteLibros = new FrmReporteLibros();
             frmReporteLibros.ShowDialog();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

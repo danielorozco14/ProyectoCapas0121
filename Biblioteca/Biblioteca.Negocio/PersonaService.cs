@@ -65,7 +65,7 @@ namespace Biblioteca.Negocio
             return personaDAO.deletePerson(idPersona);
         }
 
-        public DataTable login(string email, string passw)
+        public static DataTable login(string email, string passw)
         {
             return personaDAO.login(email, passw);
         }

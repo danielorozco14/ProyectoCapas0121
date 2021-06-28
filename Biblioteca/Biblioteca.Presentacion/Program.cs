@@ -9,11 +9,13 @@ namespace Biblioteca.Presentacion
 {
     class Program
     {
+        [STAThread]
         static void Main(String[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            Application.Run(new LoginForm());
         }
     }
 }

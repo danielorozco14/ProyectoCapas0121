@@ -71,8 +71,8 @@
             // toolStripStatusLabel
             // 
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel.Text = "Estado";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(47, 17);
+            this.toolStripStatusLabel.Text = "Sesion: ";
             // 
             // helpMenu
             // 
@@ -256,6 +256,7 @@
             this.Name = "MainForm";
             this.Text = "Gestion de Biblioteca";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
