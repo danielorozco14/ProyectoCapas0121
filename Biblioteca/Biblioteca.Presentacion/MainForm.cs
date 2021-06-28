@@ -225,5 +225,10 @@ namespace Biblioteca.Presentacion
             FrmReportePrestamos frmReportePrestamos = new FrmReportePrestamos();
             frmReportePrestamos.ShowDialog();
         }
+
+        private void reporteDeLibrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Load ReporteLibros
+        }
     }
 }

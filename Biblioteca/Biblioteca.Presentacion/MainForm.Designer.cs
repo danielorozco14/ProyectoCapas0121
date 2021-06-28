@@ -242,6 +242,7 @@
             this.reporteDeLibrosToolStripMenuItem.Name = "reporteDeLibrosToolStripMenuItem";
             this.reporteDeLibrosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.reporteDeLibrosToolStripMenuItem.Text = "Reporte de Libros";
+            this.reporteDeLibrosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeLibrosToolStripMenuItem_Click);
             // 
             // MainForm
             // 
