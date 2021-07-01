@@ -336,6 +336,7 @@ where idlibro = @IdLibro and idpersona = @Idpersona
 go
 
 SELECT * FROM PRESTAMO;
+
 --Usuario login
 create proc person_login
 @email varchar(50),
